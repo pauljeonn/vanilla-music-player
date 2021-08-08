@@ -21,7 +21,7 @@ loadSong(songs[songIndex]);
 function loadSong(song) {
 	title.innerText = song;
 	audio.src = `music/${song}.mp3`;
-	audio.src = `images/${song}.jpg`;
+	cover.src = `images/${song}.jpg`;
 }
 
 function playSong() {
@@ -33,7 +33,7 @@ function playSong() {
 }
 
 function pauseSong() {
-	musicContainer.classList.add('play');
+	musicContainer.classList.remove('play');
 	playBtn.querySelector('i.fas').classList.remove('fa-pause');
 	playBtn.querySelector('i.fas').classList.add('fa-play');
 
